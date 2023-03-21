@@ -33,7 +33,7 @@ public class EmailValidation {
         if (check_AT()) {
             String[] str = email.split("@");
             try {
-                File file = new File("C:\\Users\\Serob\\IdeaProjects\\untitled\\src\\BankProject\\VAlidation\\emailDomain.txt");
+                File file = new File("emailDomain.txt");
                 Scanner sc = new Scanner(file);
                 String s;
                 while (sc.hasNextLine()) {
