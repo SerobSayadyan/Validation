@@ -7,6 +7,8 @@ import java.util.Scanner;
  * A Valid email should contain:
  *      - one at (@) symbol;
  *      - legit domain (if the domain is not in our database (i.e. emailDomain.txt), it will be considered not valid);
+ *
+ * P.S. If there are any problems with email validation try to write absolute PATH of emailDomain.txt file
  */
 
 public class EmailValidation {
@@ -33,7 +35,7 @@ public class EmailValidation {
         if (check_AT()) {
             String[] str = email.split("@");
             try {
-                File file = new File("emailDomain.txt");
+                File file = new File("emailDomain.txt"); // PATH of emailDomain.txt
                 Scanner sc = new Scanner(file);
                 String s;
                 while (sc.hasNextLine()) {
